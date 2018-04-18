@@ -1,0 +1,14 @@
+<div class="tasks-executed">
+  <div class="tasks-executed__title">
+    Выполненные задачи
+  </div>
+  <ul class="executed-list"
+      *ngIf="lists[listsService.currentList]">
+    <li class="executed-list__item"
+    *ngFor="let item of lists[listsService.currentList].ex; let i = index">
+      {{item}}
+      <i class="material-icons"
+         (click)="reverse(item)">reply</i>
+    </li>
+  </ul>
+</div>

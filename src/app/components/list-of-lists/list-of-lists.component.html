@@ -1,0 +1,16 @@
+<div class="list-block">
+  <div class="list-block__title">
+    Список задач
+  </div>
+  <ul class="lists">
+    <li class="lists__item"
+        *ngFor="let list of lists; let i = index;"
+        (click)='getCurrentList(i)'>
+      {{lists[i].name}}
+      <i class="material-icons"
+      (click)="deleteList(i)">clear</i>
+    </li>
+  </ul>
+  <app-create-list></app-create-list>
+</div>
+

@@ -1,0 +1,8 @@
+.tasks {
+  &-block {
+    background: linear-gradient(45deg, #c5e2f6, #0089ff);
+    width: calc(100vw - 300px);
+    height: 100vh;
+    display: flex;
+  }
+}

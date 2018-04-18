@@ -1,0 +1,65 @@
+.tasks {
+  &-runtime {
+    width: calc((100vw - 300px) / 2);
+    margin: 1rem;
+  }
+  &-list {
+    &__item {
+      position: relative;
+      list-style: none;
+      border: 2px solid white;
+      padding: 10px;
+      background: white;
+      margin: 10px;
+      &>.material-icons {
+        position: absolute;
+        top: 0.4rem;
+        left: 44rem;
+        opacity: 0.2;
+        &:hover {
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+      &>.clear-icon {
+        position: absolute;
+        top: 0.4rem;
+        left: 42rem;
+        opacity: 0.2;
+        &:hover {
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  &__message {
+    text-align: center;
+    margin-top: 19rem;
+    font-size: 54px;
+    color: #c7defa;
+  }
+}
+.add-task{
+  &-form {
+    display: flex;
+    border: 2px solid white;
+    background: white;
+    padding: 13px;
+    border-radius: 1rem
+  }
+  &__button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__input {
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-left: 15px;
+
+  }
+}
+

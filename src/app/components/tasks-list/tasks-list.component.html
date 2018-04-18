@@ -1,0 +1,31 @@
+
+<div class="tasks-runtime">
+  <form action="" class="add-task-form"
+        #newTaskForm="ngForm">
+    <input type="image" class="add-task__button"
+           src="../../assets/add.png"
+           (click)="addTask(box.value)">
+    <input type="text" class="add-task__input"
+           placeholder="Добавить задачу..."
+           autofocus #box>
+  </form>
+  <ul class="tasks-list"
+  *ngIf="lists.length !== 0">
+    <li class="tasks-list__item"
+    *ngFor="let task of lists[listsService.currentList].tasks; let i = index">
+      {{task.item}}
+      <i class="material-icons"
+      (click)="setExecuted(i, task.item)"> done</i>
+      <i class="material-icons clear-icon"
+      (click)="deleteTask(i)">clear</i>
+    </li>
+  </ul>
+  <div class="tasks-empty"
+  >
+    <div class="tasks__message"
+         *ngIf="lists.length == 0">
+      Список пуст
+    </div>
+  </div>
+</div>
+
